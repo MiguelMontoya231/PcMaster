@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finalizar Compra</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Finalizar Compra</h1>
+    <form id="compraForm">
+        <h2>Resumen del Carrito</h2>
+        <div id="resumenCarrito"></div>
+        
+        <h2>Método de Pago</h2>
+        <select name="metodoPago" required>
+            <option value="">Seleccione un método de pago</option>
+            <option value="1">Tarjeta de Crédito/Débito</option>
+            <option value="2">Efecty</option>
+            <option value="3">PSE</option>
+        </select>
+
+        <div id="datosTarjeta" style="display:none;">
+            <input type="text" name="numeroTarjeta" placeholder="Número de Tarjeta">
+            <input type="text" name="nombreTarjeta" placeholder="Nombre en la Tarjeta">
+            <input type="text" name="fechaExpiracion" placeholder="MM/AA">
+            <input type="text" name="cvv" placeholder="CVV">
+        </div>
+
+        <h2>Dirección de Envío</h2>
+        <input type="text" name="direccion" placeholder="Dirección" required>
+
+        <h2>Código de Descuento</h2>
+        <input type="text" name="codigoDescuento" placeholder="Código de descuento (opcional)">
+
+        <button type="submit">Confirmar Compra</button>
+    </form>
+
+    <script src="finalizar_compra.js"></script>
+</body>
+</html>

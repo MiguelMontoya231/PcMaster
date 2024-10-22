@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto - Admin</title>
+</head>
+<body>
+    <h1>Agregar Producto</h1>
+
+    <form action="agregar_producto.php" method="POST" enctype="multipart/form-data">
+        <label for="nombre">Nombre del Producto:</label>
+        <input type="text" name="nombre" id="nombre" required>
+
+        <label for="descripcion">Descripción:</label>
+        <textarea name="descripcion" id="descripcion" required></textarea>
+
+        <label for="precio">Precio:</label>
+        <input type="number" name="precio" id="precio" step="0.01" required>
+
+        <label for="imagen">Imagen del Producto:</label>
+        <input type="file" name="imagen" id="imagen" accept="image/*" required>
+
+        <button type="submit">Agregar Producto</button>
+    </form>
+</body>
+</html>

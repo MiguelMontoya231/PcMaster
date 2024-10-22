@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PC Masters</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="carrito.js"></script>
+</head>
+<body>
+
+    <header>
+        </div>
+        <h1>PC Masters</h1>
+        <div class="auth-buttons">
+            <a href="registrarse.html" class="button">Registrarse</a>
+            <a href="login.html" class="button">Iniciar Sesión</a>
+        </div>
+    </header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="carrito.html">Carrito</a>
+    <a href="computadores.html">Computadores</a>
+    <a href="componentes.html">Componentes</a>
+    <a href="contactos.html">Contactos</a>
+</nav>
+        <h2 class="catalog-title">Productos Destacados</h2>
+        <div class="catalog">
+            <div class="product">
+                <h2>PC PREDATOR</h2>
+                <img src="Catalogo-index/pc1.png" alt="PC Gamer 1">
+                <p>Intel core i9, RTX 4090, 2TB SSD, 64 RAM.</p>
+                <p>$17,390.000 COP</p>
+                <button onclick="agregarAlCarrito({idproductos: 1, nombre: 'PC PREDATOR', precio: 17390000})" class="button">Agregar al carrito</button>
+            </div>
+            <div class="product">
+                <h2>Portatil MSI </h2>
+                <img src="Catalogo-index/pc2.png" alt="PC Gamer 2">
+                <p>Pantalla 15.6" intel core i5, SSD 512 GB, RTX 2060.</p>
+                <p>$5,490.000 COP</p>
+                <button onclick="agregarAlCarrito({idproductos: 1, nombre: 'PC PREDATOR', precio: 17390000})" class="button">Agregar al carrito</button>
+            </div>
+            <div class="product">
+                <h2>Portatil Asus ROG Strix G15</h2>
+                <img src="Catalogo-index/pc3.png" alt="PC Gamer 3">
+                <p>Descripción breve del PC Gamer 3.</p>
+                <p>$8,990.000 COP</p>
+                <button onclick="agregarAlCarrito({idproductos: 1, nombre: 'PC PREDATOR', precio: 17390000})" class="button">Agregar al carrito</button>
+            </div>
+        </div>
+
+        <div class="testimonials">
+            <h2>Lo que dicen nuestros clientes</h2>
+            <div class="testimonial">
+                <p>"El producto vino en perfectas condiciones y la entrega fue muy rapida, excelente tienda."</p>
+                <p>- Nelson Holguin</p>
+            </div>
+            <div class="testimonial">
+                <p>"La mejor tienda para comprar computadores de alta calidad."</p>
+                <p>- Jero Rivera</p>
+            </div>
+        </div>
+
+        <div class="benefits">
+            <h2>¿Por qué elegirnos?</h2>
+            <ul>
+                <li><img src="benefits images/support-icon.png" alt="Soporte técnico">Soporte técnico especializado</li>
+                <li><img src="benefits images/warranty-icon.png" alt="Garantía">Garantía en todos nuestros productos</li>
+                <li><img src="benefits images/shipping-icon.png" alt="Envío rápido">Envío rápido y seguro</li>
+            </ul>
+        </div>
+
+        <div class="social-media">
+            <h2>Síguenos en nuestras redes sociales</h2>
+            <a href="#"><img src="SocialMedia/facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="SocialMedia/twitter-icon.png" alt="Twitter"></a>
+            <a href="#"><img src="SocialMedia/instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </section>
+</main>
+
+<script>
+    document.getElementById('inicio-link').addEventListener('click', function() {
+        showSection('inicio');
+    });
+
+    document.getElementById('carrito-link').addEventListener('click', function() {
+        showSection('carrito');
+    });
+
+    document.getElementById('computadores-link').addEventListener('click', function() {
+        showSection('catalogo');
+    });
+
+    // P    uedes agregar más manejadores de eventos para los otros enlaces si es necesario
+
+    function showSection(sectionId) {
+        document.querySelectorAll('.section').forEach(function(section) {
+            section.style.display = 'none';
+        });
+        document.getElementById(sectionId).style.display = 'block';
+    }
+
+    // Mostrar la sección de inicio por defecto
+    showSection('inicio');
+</script>
+
+</body>
+</html>

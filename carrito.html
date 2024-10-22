@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito - PC Masters</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="carrito.js" defer></script>
+</head>
+<body>
+
+<header>
+    <h1>PC Masters</h1>
+    <div class="auth-buttons">
+        <?php
+        session_start();
+        if (isset($_SESSION['email'])) {
+            echo '<span>Bienvenido, ' . $_SESSION['email'] . '</span>';
+            echo '<a href="logout.php" class="button">Cerrar Sesión</a>';
+        } else {
+            echo '<a href="registrarse.html" class="button">Registrarse</a>';
+            echo '<a href="login.html" class="button">Iniciar Sesión</a>';
+        }
+        ?>
+    </div>
+</header>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="carrito.html">Carrito</a>
+    <a href="computadores.html">Computadores</a>
+    <a href="componentes.html">Componentes</a>
+    <a href="contactos.html">Contactos</a>
+</nav>
+
+<main>
+    <h2>Carrito de Compras</h2>
+    <div class="cart"></div>
+</main>
+
+</body>
+</html>
